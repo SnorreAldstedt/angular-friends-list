@@ -19,5 +19,4 @@ export class PeopleComponent {
   deleteFromFavs(p: string){
     this.deleteFav.emit(p);
   }
-
 }

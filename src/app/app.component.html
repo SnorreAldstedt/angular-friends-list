@@ -5,13 +5,13 @@
 </div>
 <div class="favorite">
   <p>My favorite people are: </p>
-  <p *ngFor = "let f of favorites">{{f}}</p>
+  <p *ngFor = "let f of favorites" style="text-transform: capitalize;">&nbsp; {{f}}, </p>
 </div>
 <div class="people">
   <app-people
-  *ngFor="let b of people"
-  [name]="b"
-  [isFav]="favorites.includes(b)"
+  *ngFor="let p of people"
+  [name]="p"
+  [isFav]="favorites.includes(p)"
   (addFav)="addFav($event)"
   (deleteFav)="deleteFav($event)"
 ></app-people>
